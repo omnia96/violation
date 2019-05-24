@@ -1,0 +1,11 @@
+<view class="container" style="bottom:{{bottom}}">
+    <view class="content" style="animation:{{animation}} 1s;">
+                <view class="toast">
+                    <d-icon wx:if="{{value.icon == 'success'}}" type="fa-check-circle" color="#4caf50"></d-icon>
+                    <d-icon wx:if="{{value.icon == 'fail'}}" type="fa-times-circle" color="#f44336"></d-icon>
+                    <d-icon wx:if="{{value.icon == 'warning'}}" type="fa-exclamation-circle" color="#ff9800"></d-icon>
+                    <view class="toast-message-wrap" wx:if="{{value.icon == 'none'}}">{{value.message}}</view>
+                    <view class="toast-message" wx:else>{{value.message}}</view>
+                </view>
+    </view>
+</view>

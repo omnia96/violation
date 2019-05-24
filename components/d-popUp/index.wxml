@@ -1,0 +1,15 @@
+<view class="container" style="bottom:{{bottom}}">
+    <view class="content" style="animation:{{animation}} 1s;">
+        <view class="items" wx:for="{{items}}" wx:key="key" wx:for-item="item">
+            <view class="input" wx:if="{{item.type == 'input'}}">
+                <view class="title">{{item.value.title}}</view>
+                <input id="{{item.value.name}}" placeholder="{{item.value.placeholder? item.value.placeholder:''}}"
+                    type="text" wx:if="{{item.type == 'input'}}" bindblur="saveInput" />
+            </view>
+            <view class="buttons" wx:if="{{item.type == 'button'}}">
+                <view class="button" wx:for="{{item.value}}" wx:key="keyChild" wx:for-item="itemChild" style="background:{{itemChild.background? itemChild.background:'#9e9e9e'}};color:{{itemChild.color? itemChild.color:'#fff'}};" bind:tap="handleTap" id="{{itemChild.name}}">
+                    {{itemChild.title}}</view>
+            </view>
+        </view>
+    </view>
+</view>

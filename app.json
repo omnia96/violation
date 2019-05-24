@@ -3,22 +3,23 @@
     "pages/index/index",
     "pages/content/content",
     "pages/historys/historys",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/violationInfo/violationInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00a4f4",
-    "navigationBarTitleText": "发票查验",
+    "navigationBarTitleText": "违章查询",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color":"#ffffff",
-    "list":[
+  "tabBar": {
+    "color": "#ffffff",
+    "list": [
       {
-        "pagePath":"pages/index/index"
+        "pagePath": "pages/index/index"
       },
       {
-        "pagePath":"pages/historys/historys"
+        "pagePath": "pages/historys/historys"
       }
     ]
   },

@@ -1,0 +1,4 @@
+<container>
+    <i class="fa {{type}}" style="color:{{color}}; font-size:{{size}};"/>
+</container>
+

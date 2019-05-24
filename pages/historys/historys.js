@@ -6,7 +6,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 'historys',
+    tabBar: [
+      {
+          title:"首页",
+          type:"fa-home"
+      },
+      {
+          title:"查分",
+          type:"fa-search"
+      }],
     courierInfor:null,
     visible:false,
     deleteId:null
@@ -70,6 +78,19 @@ handletap:function(e){
     that.setData({
       courierInfor:cache.data
     })
+  },
+  tabEvent(e){
+    let id = e.detail
+    switch (id) {
+      case "首页":
+        wx.switchTab({
+          url: "../index/index"
+        })
+        break;
+      default:
+        this.onShow()
+        break;
+    }
   },
   onShareAppMessage: function () {
 

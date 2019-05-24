@@ -23,7 +23,4 @@
 <i-modal visible="{{ visible }}" id="{{deleteId}}" bind:ok="handleDelete" bind:cancel="handleClose">
   <view>你确定要删除这条发票信息嘛？</view>
 </i-modal>
-<i-tab-bar current="{{ current }}" color="#00a4f4" bindchange="handleChange" fixed="true">
-  <i-tab-bar-item key="index" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
-  <i-tab-bar-item key="historys" icon="time" current-icon="time_fill" title="历史记录"></i-tab-bar-item>
-</i-tab-bar>
+<d-navigationBar bind:navbarSelected="tabEvent" itemList="{{tabBar}}" selected="查分"/>

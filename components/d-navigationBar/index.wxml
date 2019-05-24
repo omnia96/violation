@@ -1,0 +1,13 @@
+<view class="container" style="background-color:{{background}};">
+    <view class="navigationBar">
+        <view class="item" wx:for="{{itemList}}" wx:key="key" wx:for-item="item" id="{{item.title}}" bind:tap="navbarSelected">
+            <d-icon type="{{item.type}}" color="{{item.title == selected ? primary:secondary}}" size="25px"></d-icon>
+            <view class="title" style="color:{{item.title == selected ? primary:secondary}}">{{item.title}}</view>
+        </view>
+    </view>
+    <view class="floatButtonBg">
+        <view class="floatButton" style="background-color:{{primary}};" bind:tap="floatButtonTap">
+            <d-icon type="fa-plus" size="20px"></d-icon>
+        </view>
+    </view>
+</view>
